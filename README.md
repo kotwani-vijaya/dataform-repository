@@ -1,3 +1,5 @@
+README
+
 Terraform Setup for Google Cloud Dataform
 
 This repository contains Terraform code to set up a Dataform repository along with its associated workflow and release configurations on Google Cloud Platform (GCP) using the Google Beta provider.
