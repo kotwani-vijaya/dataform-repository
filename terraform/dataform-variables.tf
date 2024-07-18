@@ -63,64 +63,64 @@ variable "dataform_location" {
 
 variable "google_dataform_repo_name" {
   type    = list(string)
-  default = ["my_repo1"]
+  default = ["sales_analysis"]
 }
 
 variable "google_dataform_repository_release_config" {
   type    = list(string)
-  default = ["my_release1"]
+  default = ["sales_release"]
 }
 
 variable "cron_release_config" {
   type = map(string)
   default = {
-    "my_release1" = "0 8 * * *"
+    "sales_release" = "0 7 * * *"
   }
 }
 
 variable "release_config_time_zone" {
   type    = map(string)
   default = {
-    "my_release1" = "UTC"
+    "sales_release" = "UTC"
   }
 }
 
 variable "google_dataform_repository_workflow_config" {
   type    = list(string)
-  default = ["my_workflow1"]
+  default = ["sales_workflow"]
 }
 
 variable "workflow_config_release_config" {
   type    = map(string)
   default = {
-    "my_workflow1" = "my_release1"
+    "sales_workflow" = "sales_release"
   }
 }
 
 variable "release_config_repo_name" {
   type    = map(string)
   default = {
-    "my_release1" = "my_repo1"
+    "sales_release" = "sales_analysis"
   }
 }
 
 variable "workflow_config_repo_name" {
   type    = map(string)
   default = {
-    "my_workflow1" = "my_release1"
+    "sales_workflow" = "sales_release"
   }
 }
 
 variable "cron_workflow_config" {
   type = map(string)
   default = {
-    "my_workflow1" = "10 * * * *"
+    "sales_workflow" = "10 * * * *"
   }
 }
 
 variable "workflow_config_time_zone" {
   type    = map(string)
   default = {
-    "my_workflow1" = "UTC"
+    "sales_workflow" = "UTC"
   }
 }

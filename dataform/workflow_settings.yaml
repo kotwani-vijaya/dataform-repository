@@ -1,0 +1,5 @@
+defaultProject: boreal-physics-428206-g8
+defaultLocation: US
+defaultDataset: retail_dataset
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0-beta.4
