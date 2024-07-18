@@ -1,0 +1,23 @@
+config {
+  type: "table",
+  name: "customer_segments",
+  description: "Customer segmentation based on purchase behavior",
+  columns: {
+    customer_id: "Unique identifier for the customer",
+    total_spend: "Total amount spent by the customer",
+    segment: "Customer segment (High Value, Medium Value, Low Value)"
+  }
+}
+
+SELECT
+  customer_id,
+  SUM(quantity * unit_price) AS total_spend,
+  CASE
+    WHEN SUM(quantity * unit_price) > 1000 THEN 'High Value'
+    WHEN SUM(quantity * unit_price) > 500 THEN 'Medium Value'
+    ELSE 'Low Value'
+  END AS segment
+FROM
+  ${ref("raw_sales")}
+GROUP BY
+customer_id

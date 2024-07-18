@@ -66,3 +66,11 @@ Confirm the action when prompted.
 
 After applying the Terraform configuration, your Dataform repository, along with its workflow and release configurations, will be set up in your GCP project. 
 Verify the deployment through the Google Cloud Console to ensure everything is configured as expected.
+
+**Dataform Repo**
+
+Refer to the dataform directory for sample code
+
+**Deployment Script**
+
+Refer to the python-scripts for cloning dataform or deploying your changes to dataform repository

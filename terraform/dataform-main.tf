@@ -41,8 +41,6 @@ resource "google_dataform_repository_workflow_config" "workflow" {
   project        = var.project_id
   region         = var.dataform_location
   repository     = var.workflow_config_repo_name[each.value]
-  #repository     = "my_repo1"
-  #name           = each.value
   name           = "${each.value}"
   depends_on = [google_dataform_repository_release_config.release]
   release_config = var.workflow_config_release_config[each.value]
@@ -50,7 +48,7 @@ resource "google_dataform_repository_workflow_config" "workflow" {
     included_targets {
       database = var.database
       schema   = var.schema
-      name     = "centralized-data-hub-np.source_landing_jp.action" 
+      name     = "target_1" 
 
 
     }
